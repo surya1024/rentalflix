@@ -4,17 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Service implementing IFlix interface You can use any Java collection type to
  * store movies
  */
 public class MovieService implements IFlix {
-	HashSet<Movie> moveStore;
+	public Set<Movie> moveStore;
 	int movieID = 0;
 
 	public MovieService() {
-		Collections.synchronizedSet(moveStore);
+		moveStore=Collections.synchronizedSet(new HashSet<Movie>());;
 	}
 
 	@Override
