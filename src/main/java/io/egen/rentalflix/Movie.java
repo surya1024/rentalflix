@@ -12,13 +12,16 @@ public class Movie {
 		return id;
 	}
 	
-	public Movie(int id, String title, String language, String year,
-			String rentedBy) {
-		this.id = id;
+	public Movie( String title, String language, String year) {
 		this.title = title;
 		this.language = language;
 		this.year = year;
-		this.rentedBy = rentedBy;
+	}
+	public Movie( int id,String title, String language, String year) {
+		this.id=id;
+		this.title = title;
+		this.language = language;
+		this.year = year;
 	}
 
 	public void setId(int id) {
